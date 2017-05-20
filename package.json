@@ -1,0 +1,53 @@
+{
+  "authors": [
+    {
+      "name": "Honchar Denys",
+      "email": "crackeraki@gmail.com"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/webartwork/js-minify/issues"
+  },
+  "dependencies": {
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-fn": "*",
+    "gulp-minify": "*",
+    "gulp-ng-annotate": "*",
+    "gulp-sourcemaps": "*"
+  },
+  "description": "Minify all files",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "050c98b1d0b545856c3262a8020d3bd3fc2b0b15",
+    "tarball": "https://registry.npmjs.org/js-minify/-/js-minify-0.1.5.tgz"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "gitHead": "5f63e8afcb65798ea7d17e089b162bee2f947da9",
+  "homepage": "https://github.com/webartwork/js-minify#readme",
+  "keywords": [
+    "gulpplugin",
+    "gulp",
+    "minify"
+  ],
+  "license": "MIT",
+  "main": "./index.js",
+  "maintainers": [
+    {
+      "name": "crackeraki",
+      "email": "crackeraki@gmail.com"
+    }
+  ],
+  "name": "js-minify",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webartwork/gulp-minify.git"
+  },
+  "scripts": {},
+  "version": "0.1.6"
+}
