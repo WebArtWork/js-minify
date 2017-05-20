@@ -12,7 +12,7 @@
     "gulp": "*",
     "gulp-concat": "*",
     "gulp-fn": "*",
-    "gulp-minify": "*",
+    "gulp-minify": "0.0.15",
     "gulp-ng-annotate": "*",
     "gulp-sourcemaps": "*"
   },
