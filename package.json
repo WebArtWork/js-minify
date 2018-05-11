@@ -48,5 +48,5 @@
     "url": "git+https://github.com/webartwork/gulp-minify.git"
   },
   "scripts": {},
-  "version": "0.1.7"
+  "version": "0.1.8"
 }
