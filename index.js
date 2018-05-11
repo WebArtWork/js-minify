@@ -6,6 +6,14 @@ var sourcemaps = require('gulp-sourcemaps');
 var ngAnnotate = require('gulp-ng-annotate');
 var fs = require('fs');
 
+var unique_string = function(files, config){
+	var str = '';
+	for (var i = 0; i < files.length; i++) {
+		str += files[i] + fs.statSync(files[i]).mtime;
+	}
+	return str + config.way + config.prefix;
+}
+
 module.exports = function gulpJsMinify(config) {
 	var name = 'lab';
 	if(config.name) name = config.name;
@@ -14,8 +22,9 @@ module.exports = function gulpJsMinify(config) {
 	if (fs.existsSync(config.way + name + '-min.js')) {
 		var data = fs.readFileSync(config.way + name + '-min.js', 'utf8');
 		var lines = data.split("\n");
-		if (lines[lines.length - 1].indexOf(files.toString() + config.way + config.prefix) > -1) return;
+		if (lines[lines.length - 1].indexOf(unique_string(files, config)) > -1) return;
 	}
+	var once = true;
 	gulp.src(files)
 	.pipe(sourcemaps.init())
 	.pipe(concat(name + '.js'))
@@ -23,9 +32,11 @@ module.exports = function gulpJsMinify(config) {
 	.pipe(sourcemaps.write())
 	.pipe(minify({
 		mangle: ['sharedData','angular']
-	}))
-	.pipe(gulp.dest(config.way))
+	})).pipe(gulp.dest(config.way))
 	.pipe(gulpFn(function() {
-		fs.appendFile(config.way + name + '-min.js', '\r\n/*' + files.toString() + config.way + config.prefix + '*/', function(err) {});
+		if(once){
+			once = false;
+			fs.appendFile(config.way + name + '-min.js', '\r\n/*' + unique_string(files, config) + '*/', function(err) {});
+		}
 	}));
 };

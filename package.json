@@ -26,7 +26,6 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "gitHead": "5f63e8afcb65798ea7d17e089b162bee2f947da9",
   "homepage": "https://github.com/webartwork/js-minify#readme",
   "keywords": [
     "gulpplugin",
@@ -49,5 +48,5 @@
     "url": "git+https://github.com/webartwork/gulp-minify.git"
   },
   "scripts": {},
-  "version": "0.1.6"
+  "version": "0.1.7"
 }
