@@ -9,12 +9,12 @@
     "url": "https://github.com/webartwork/js-minify/issues"
   },
   "dependencies": {
-    "gulp": "*",
-    "gulp-concat": "*",
-    "gulp-fn": "*",
+    "gulp": "3.9.1",
+    "gulp-concat": "2.6.1",
+    "gulp-fn": "0.0.3",
     "gulp-minify": "0.0.15",
-    "gulp-ng-annotate": "*",
-    "gulp-sourcemaps": "*"
+    "gulp-ng-annotate": "2.1.0",
+    "gulp-sourcemaps": "2.6.4"
   },
   "description": "Minify all files",
   "devDependencies": {},
@@ -48,5 +48,5 @@
     "url": "git+https://github.com/webartwork/gulp-minify.git"
   },
   "scripts": {},
-  "version": "0.1.8"
+  "version": "0.1.9"
 }
